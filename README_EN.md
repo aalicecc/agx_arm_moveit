@@ -2,11 +2,11 @@
 
 [中文](./README.md)
 
-![ubuntu](https://img.shields.io/badge/Ubuntu-22.04-orange.svg)
-
-| PYTHON | STATE |
+|ROS |STATE|
 |---|---|
-| ![humble](https://img.shields.io/badge/ros-humble-blue.svg) | ![Pass](https://img.shields.io/badge/Pass-blue.svg) |
+|![humble](https://img.shields.io/badge/ros-humble-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
+|![jazzy](https://img.shields.io/badge/ros-jazzy-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
+|![foxy](https://img.shields.io/badge/ros-foxy-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
 
 > **Note:** For installation issues, refer to [Section 4](#4-troubleshooting).
 
@@ -18,7 +18,7 @@
 [Reference](https://moveit.ai/install-moveit2/binary/)
 
 ```bash
-sudo apt install ros-humble-moveit*
+sudo apt install ros-$ROS_DISTRO-moveit*
 ```
 
 2) Build from Source
@@ -31,7 +31,7 @@ sudo apt install ros-humble-moveit*
 After installing MoveIt 2, additional dependencies are required:
 
 ```bash
-sudo apt-get install ros-humble-control* ros-humble-joint-trajectory-controller ros-humble-joint-state-* ros-humble-gripper-controllers ros-humble-trajectory-msgs
+sudo apt-get install ros-$ROS_DISTRO-control* ros-$ROS_DISTRO-joint-trajectory-controller ros-$ROS_DISTRO-joint-state-* ros-$ROS_DISTRO-gripper-controllers ros-$ROS_DISTRO-trajectory-msgs
 ```
 
 **Locale Configuration:** If your system locale is not set to English, configure as follows:
@@ -106,7 +106,7 @@ source install/setup.bash
 
 ---
 
-![piper_moveit](../../asserts/pictures/piper_moveit.png)
+![piper_moveit](./asserts/pictures/piper_moveit.png)
 
 Drag the arrows at the arm's end-effector to manipulate the robot interactively.
 
