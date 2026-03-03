@@ -7,7 +7,6 @@
 |---|---|
 |![humble](https://img.shields.io/badge/ros-humble-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
 |![jazzy](https://img.shields.io/badge/ros-jazzy-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
-|![foxy](https://img.shields.io/badge/ros-foxy-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
 
 > 注：安装使用过程中出现问题可查看[第4部分](#4-可能遇见的问题)
 
@@ -30,7 +29,12 @@ sudo apt install ros-$ROS_DISTRO-moveit*
 安装完Moveit2之后，需要安装一些依赖
 
 ```bash
-sudo apt-get install ros-$ROS_DISTRO-control* ros-$ROS_DISTRO-joint-trajectory-controller ros-$ROS_DISTRO-joint-state-* ros-$ROS_DISTRO-gripper-controllers ros-$ROS_DISTRO-trajectory-msgs
+sudo apt-get install -y \
+    ros-$ROS_DISTRO-control* \
+    ros-$ROS_DISTRO-joint-trajectory-controller \
+    ros-$ROS_DISTRO-joint-state-* \
+    ros-$ROS_DISTRO-gripper-controllers \
+    ros-$ROS_DISTRO-trajectory-msgs
 ```
 
 若系统语言区域设置不为英文区域，须设置
