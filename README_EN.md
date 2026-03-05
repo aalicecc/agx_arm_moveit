@@ -1,40 +1,39 @@
-# agx_arm_moveit
+# agx_arm_moveit (ROS1)
 
 [中文](./README.md)
 
 |ROS |STATE|
 |---|---|
-|![humble](https://img.shields.io/badge/ros-humble-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
-|![jazzy](https://img.shields.io/badge/ros-jazzy-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
+|![noetic](https://img.shields.io/badge/ros-noetic-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
 
 > **Note:** For installation issues, refer to [Section 4](#4-troubleshooting).
 
 ---
 
-## 1. Install MoveIt 2
+## 1. Install MoveIt
 
 1) Binary Installation
-[Reference](https://moveit.ai/install-moveit2/binary/)
+[Reference](https://moveit.ai/install/)
 
 ```bash
 sudo apt install ros-$ROS_DISTRO-moveit*
 ```
 
 2) Build from Source
-[Reference](https://moveit.ai/install-moveit2/source/)
+[Reference](https://moveit.ai/install/source/)
 
 ---
 
 ## 2. Install Dependencies
 
-After installing MoveIt 2, additional dependencies are required:
+After installing MoveIt, additional dependencies are required:
 
 ```bash
 sudo apt-get install -y \
     ros-$ROS_DISTRO-control* \
     ros-$ROS_DISTRO-joint-trajectory-controller \
     ros-$ROS_DISTRO-joint-state-* \
-    ros-$ROS_DISTRO-gripper-controllers \
+    ros-$ROS_DISTRO-ros-controllers \
     ros-$ROS_DISTRO-trajectory-msgs
 ```
 
@@ -51,9 +50,9 @@ source ~/.bashrc
 
 ### 3.1 Launch agx_arm_ctrl
 
-Before starting MoveIt 2, initialize the robot arm control node. See: [agx_arm_ctrl](https://github.com/aalicecc/agx_arm_ros_test.git)
+Before starting MoveIt, initialize the robot arm control node. See: [agx_arm_ctrl](https://github.com/aalicecc/agx_arm_ros_test.git)
 
-### 3.2 MoveIt 2 Control
+### 3.2 MoveIt Control
 
 Open an additional terminal and run the following commands:
 
@@ -67,31 +66,31 @@ source install/setup.bash
 1. Nero Robotic Arm 
 
     ```bash
-    ros2 launch nero_no_effector_moveit demo.launch.py joint_states:=/control/joint_states
+    roslaunch nero_no_effector_moveit demo.launch joint_states:=/control/joint_states
     ```
 
 2. Piper Robotic Arm 
 
     ```bash
-    ros2 launch piper_no_effector_moveit demo.launch.py joint_states:=/control/joint_states
+    roslaunch piper_no_effector_moveit demo.launch joint_states:=/control/joint_states
     ```
 
 3. Piper_X Robotic Arm 
 
     ```bash
-    ros2 launch piper_x_no_effector_moveit demo.launch.py joint_states:=/control/joint_states
+    roslaunch piper_x_no_effector_moveit demo.launch joint_states:=/control/joint_states
     ```
 
 4. Piper_H Robotic Arm 
 
     ```bash
-    ros2 launch piper_h_no_effector_moveit demo.launch.py joint_states:=/control/joint_states
+    roslaunch piper_h_no_effector_moveit demo.launch joint_states:=/control/joint_states
     ```
 
 5. Piper_L Robotic Arm 
 
     ```bash
-    ros2 launch piper_l_no_effector_moveit demo.launch.py joint_states:=/control/joint_states
+    roslaunch piper_l_no_effector_moveit demo.launch joint_states:=/control/joint_states
     ```
 
 #### 3.2.2 With Gripper
@@ -99,13 +98,13 @@ source install/setup.bash
 1. Piper Robotic Arm 
 
     ```bash
-    ros2 launch piper_with_gripper_moveit demo.launch.py joint_states:=/control/joint_states
+    roslaunch piper_with_gripper_moveit demo.launch joint_states:=/control/joint_states
     ```
 
 2. Piper_X Robotic Arm 
 
     ```bash
-    ros2 launch piper_x_with_gripper_moveit demo.launch.py joint_states:=/control/joint_states
+    roslaunch piper_x_with_gripper_moveit demo.launch joint_states:=/control/joint_states
     ```
 
 ![piper_moveit](./asserts/pictures/piper_moveit.png)
@@ -116,7 +115,7 @@ Once the desired pose is set, click Plan & Execute under MotionPlanning → Plan
 
 ## 4. Troubleshooting
 
-### 4.1 Error Running `demo.launch.py`
+### 4.1 Error Running `demo.launch`
 
 **Error:** Parameter expects a double but received a string.
 
@@ -130,5 +129,5 @@ source ~/.bashrc
 
 **Option B:** Prefix launch command
 ```bash
-LC_NUMERIC=en_US.UTF-8 ros2 launch piper_moveit_config demo.launch.py
+LC_NUMERIC=en_US.UTF-8 roslaunch piper_moveit_config demo.launch
 ```
