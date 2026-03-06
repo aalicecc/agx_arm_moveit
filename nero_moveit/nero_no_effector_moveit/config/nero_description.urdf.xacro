@@ -3,7 +3,7 @@
     <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
 
     <!-- Import nero_description urdf file -->
-    <xacro:include filename="$(find nero_description)/urdf/nero_description_stand_v2.urdf" />
+    <xacro:include filename="$(find agx_arm_description)/agx_arm_urdf/nero/urdf/nero_description.urdf" />
 
     <!-- Import control_xacro -->
     <xacro:include filename="nero_description.ros2_control.xacro" />

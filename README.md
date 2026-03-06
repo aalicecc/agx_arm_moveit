@@ -46,11 +46,11 @@ source ~/.bashrc
 
 ---
 
-## 3 moveit控制真实机械臂
+## 3 moveit2 控制真实机械臂
 
 ### 3.1 开启agx_arm_ctrl
 
-启动 moveit2 前，先开启机械臂控制节点，详见：[agx_arm_ctrl](https://github.com/aalicecc/agx_arm_ros_test.git)
+启动 moveit2 前，先开启机械臂控制节点，详见：[agx_arm_ctrl](../../README.md)
 
 ### 3.2 moveit2控制
 

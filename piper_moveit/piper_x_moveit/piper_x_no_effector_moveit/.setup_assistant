@@ -1,7 +1,7 @@
 moveit_setup_assistant_config:
   urdf:
-    package: piper_x_description
-    relative_path: urdf/piper_x_description_no_gripper.urdf
+    package: agx_arm_description
+    relative_path: agx_arm_urdf/piper_x/urdf/piper_x_description_no_gripper.urdf
   srdf:
     relative_path: config/piper_x_description.srdf
   package_settings:

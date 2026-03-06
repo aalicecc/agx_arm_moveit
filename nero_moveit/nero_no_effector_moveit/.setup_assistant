@@ -1,7 +1,7 @@
 moveit_setup_assistant_config:
   urdf:
-    package: nero_description
-    relative_path: urdf/nero_description_stand_v2.urdf
+    package: agx_arm_description
+    relative_path: agx_arm_urdf/nero/urdf/nero_description.urdf
   srdf:
     relative_path: config/nero_description.srdf
   package_settings:

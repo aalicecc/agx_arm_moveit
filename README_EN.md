@@ -47,11 +47,11 @@ source ~/.bashrc
 
 ---
 
-## 3. Control Real Robot Arm with MoveIt
+## 3. Control Real Robot Arm with MoveIt 2
 
 ### 3.1 Launch agx_arm_ctrl
 
-Before starting MoveIt 2, initialize the robot arm control node. See: [agx_arm_ctrl](https://github.com/aalicecc/agx_arm_ros_test.git)
+Before starting MoveIt 2, initialize the robot arm control node. See: [agx_arm_ctrl](../../README_EN.md)
 
 ### 3.2 MoveIt 2 Control
 
